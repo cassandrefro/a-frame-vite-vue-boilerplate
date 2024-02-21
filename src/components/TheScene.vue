@@ -15,7 +15,7 @@
 
 <template>
   <a-scene stats background="color: #bdd8e5" fog="type: linear; color: #bdd8e5; near: 30; far: 60">   
-      <a-box position="0 0 -10" duplicate-me></a-box>
+      <a-box position="-10 0 -10" duplicate-me="rows: 20; cols: 20"></a-box>
       <TheOcean />
       <TheCameraRig />
   </a-scene>

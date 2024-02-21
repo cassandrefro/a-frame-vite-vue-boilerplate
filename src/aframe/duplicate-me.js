@@ -32,7 +32,7 @@ AFRAME.registerComponent('duplicate-me', {
             tileEl.setAttribute('material', 'color', 'pink');
             tileEl.setAttribute('position', {
                 x: this.el.object3D.position.x + x * tileSize + offset * x,
-                y: this.el.object3D.position.y + Math.random()*0.1,
+                y: this.el.object3D.position.y + Math.random()*0.05,
                 z: this.el.object3D.position.z + z * tileSize + offset * z
             });
             // alternate colors like a chessboard
