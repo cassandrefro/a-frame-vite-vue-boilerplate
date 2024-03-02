@@ -25,7 +25,7 @@
         geometry="primitive: sphere; radius: 400"
         rotation="0 0 0"
         position="0 0 0"
-        material="opacity: 0.5; side: back "
+        material="opacity: 0.6; side: back "
     ></a-entity>
 
     <a-entity

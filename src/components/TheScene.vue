@@ -12,8 +12,8 @@ import TheMainIsland from './TheMainIsland.vue';
 </script>
 
 <template>
-  <a-scene stats fog="type: linear; color: #574370; near: 60; far: 90">  
-    <!-- <a-scene stats background="color: #232027 #8c73ab" fog="type: linear; color: #232027; near: 50; far: 120">    -->
+  <a-scene stats fog="type: linear; color: #8c73ab; near: 1; far: 80">  
+    <!-- <a-scene stats background="color: #232027 #8c73ab #574370" fog="type: linear; color: #232027; near: 50; far: 120">    -->
       <!-- <a-entity light="type: ambient;intensity: 5; color: #4c3c2f" position="1.608 9.227 -25.154"></a-entity> -->
       <a-entity light="type: point; intensity: 0.3; color: #31abb4" position="4.142 5.163 -16.797" rotation="0 -180 0"></a-entity>
       <a-entity light="type: point; intensity: 1; color: #e2ab7e" position="10.095 50 5.295"></a-entity>
