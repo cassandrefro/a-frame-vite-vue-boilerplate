@@ -5,6 +5,8 @@
   import '../aframe/blink-controls.js';
   import '../aframe/physx-grab.js';
   import '../aframe/look-at.js';
+  import '../aframe/bind-position.js';
+  import '../aframe/bind-rotation.js';
 </script>
 
 <template>
