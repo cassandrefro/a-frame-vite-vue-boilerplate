@@ -1,5 +1,6 @@
 <script setup>
-
+import '../aframe/capturable.js';
+import '../aframe/clickable.js';
 import PortalTeleporter from './PortalTeleporter.vue';
 
   defineProps({
@@ -29,8 +30,11 @@ import PortalTeleporter from './PortalTeleporter.vue';
     ></a-entity>
 
     <a-entity
+        id="cauldron"
         gltf-model="#cauldron"
-        position="0 0 0"
+        clickable
+        capturable
+        position="3 0 0"
         scale="1 1 1"
     />
 
@@ -69,6 +73,18 @@ import PortalTeleporter from './PortalTeleporter.vue';
     scale="1 1 1"
     data-role="nav-mesh"
     material="color: blue"
+    visible="false"
+  ></a-entity>
+
+  <a-entity
+ id="main-room-nav-mesh" 
+    geometry="primitive: circle; radius: 17.680"
+    position="9.630 0 6.992"
+    rotation="-90 -70 0"
+    scale="1.6 1 1"
+    data-role="nav-mesh"
+    material="color: blue"
+    visible="false"
   ></a-entity>
 
 <!--   <a-entity
