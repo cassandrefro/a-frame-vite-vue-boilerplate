@@ -1,12 +1,13 @@
 <script setup>
+
+  import '../aframe/bind-position.js';
+  import '../aframe/bind-rotation.js';
   import '../aframe/disable-in-vr.js';
   import '../aframe/hide-in-vr.js';
   import '../aframe/simple-navmesh-constraint.js';
   import '../aframe/blink-controls.js';
   import '../aframe/physx-grab.js';
   import '../aframe/look-at.js';
-  import '../aframe/bind-position.js';
-  import '../aframe/bind-rotation.js';
 </script>
 
 <template>
@@ -24,40 +25,6 @@
         camera
         position="0 1.65 0"
       >
-        <a-entity
-          id="modal"
-          bind-position="target: #head"
-          bind-rotation="target: #head"
-          position="0 1.65 -1"
-          scale="1 1 1"
-          visible="true"
-          look-at="#head"
-        >
-          <a-plane material="color: black">
-            <a-text
-              value="Inventaire"
-              align="left"
-              width="1"
-              position="-0.4 0.4 0"
-              scale="0.8 0.8 0.8"
-            ></a-text>
-            <a-text
-              id="cauldron-modal-text"
-              value="Chaudron"
-              align="left"
-              width="1"
-              position="-0.4 0.3 0"
-              scale="0.7 0.7 0.7"
-            ></a-text>
-            <a-text
-              value="Champignon"
-              align="left"
-              width="1"
-              position="-0.4 0.25 0"
-              scale="0.7 0.7 0.7"
-            ></a-text>
-          </a-plane>
-        </a-entity>
         <a-entity
           geometry="primitive: circle; radius: 0.0003;"
           material="shader: flat; color: white;"
@@ -99,6 +66,67 @@
           visible="false"
           physx-body="type: kinematic; emitCollisionEvents: true">
         </a-sphere>
+      </a-entity>
+
+      <a-entity
+        id="inventory-3d"
+        position="0 1.65 -0.5"
+        scale="0.2 0.2 0.2"
+      >
+        <a-box 
+          material="color: #33ff33; opacity: 0.7"
+          position="0 0 0"
+          scale="1 1 1"
+          visible="false"
+        />
+        <a-entity rotation="0 0 -180">
+          <a-light
+            type="point"
+            intensity="0.5"
+            color="#33ff33"
+            position="0 0 0"/>
+        </a-entity>
+
+        <a-entity
+          id="inventory-cauldron"
+          gltf-model="url(assets/cauldron_green.glb)"
+          clickable
+          position="6 0 0"
+          scale="1 1 1"
+        />  
+      </a-entity>
+
+      <a-entity
+        id="modal"
+        position="0 1.65 -10"
+        scale="1 1 1"
+        visible="false"
+        look-at
+      >
+        <a-plane material="color: black">
+          <a-text
+            value="Inventaire"
+            align="left"
+            width="1"
+            position="-0.4 0.4 0"
+            scale="0.8 0.8 0.8"
+          ></a-text>
+          <a-text
+            id="cauldron-modal-text"
+            value="Chaudron"
+            align="left"
+            width="1" 
+            position="-0.4 0.3 0"
+            scale="0.7 0.7 0.7"
+          ></a-text>
+          <a-text
+            value="Champignon"
+            align="left"
+            width="1"
+            position="-0.4 0.25 0"
+            scale="0.7 0.7 0.7"
+          ></a-text>
+        </a-plane>
       </a-entity>
       
 

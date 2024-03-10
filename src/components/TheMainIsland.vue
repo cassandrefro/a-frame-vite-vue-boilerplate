@@ -46,7 +46,7 @@ import PortalTeleporter from './PortalTeleporter.vue';
       :rot="false"
       :x="93.181"
       :y="-2.994"
-      :z="-7.769"
+      :z="-0.769"
 
     />
 

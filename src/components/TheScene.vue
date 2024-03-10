@@ -33,7 +33,6 @@ import TheMainIsland from './TheMainIsland.vue';
     <template v-if="allAssetsLoaded">
       <TheMainIsland :scale="scale" />         
     </template>
-      
-      <TheCameraRig position="0 0 0" />
+      <TheCameraRig position="16 0 21" />
   </a-scene>
 </template>
